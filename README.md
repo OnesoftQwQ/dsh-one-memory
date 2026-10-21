@@ -38,11 +38,31 @@ DeepSeek Harness 插件：一份**全局记忆** + 一组**键值记忆**，会�
 
 ## 安装
 
-```bash
-cd /path/to/dsh-one-memory && npm install && npm run build
+仓库已经带上 `lib/` 构建产物，所以两种方式都能直接装：
+
+**从 GitHub（Web 插件管理器）**
+
+```text
+github:OnesoftQwQ/dsh-one-memory
 ```
 
-然后在 DSH 里安装这个目录作为 bundle（profile 用 `link:` 指向该目录，因此必须已经构建出 `lib/`，且目录自包含）。
+**从本地目录**
+
+```bash
+git clone https://github.com/OnesoftQwQ/dsh-one-memory.git
+```
+
+然后在 DSH 的插件管理器里填这个绝对路径（profile 用 `link:` 指向它，不跑安装脚本，直接读 `lib/`）。
+
+修改源码后需要手动构建：
+
+```bash
+npm install && npm run build
+```
+
+## License
+
+MIT © OnesoftQwQ
 
 ## 界面
 
