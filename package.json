@@ -52,6 +52,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-name/dsh-one-memory.git"
+    "url": "git+https://github.com/OnesoftQwQ/dsh-one-memory.git"
+  },
+  "author": "OnesoftQwQ",
+  "homepage": "https://github.com/OnesoftQwQ/dsh-one-memory#readme",
+  "bugs": {
+    "url": "https://github.com/OnesoftQwQ/dsh-one-memory/issues"
   }
 }
