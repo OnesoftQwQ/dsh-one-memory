@@ -1,0 +1,17 @@
+# dsh-one-memory bundle.
+#
+# The bundle enables DSH's opt-in SQLite full-text index so `session_search`
+# can use FTS instead of the literal fallback. The index is a separate derived
+# database; the session log remains the source of truth. `first-search` defers
+# the node:sqlite import until the first search.
+#
+# Remove or override this row if the deployment manages the FTS index itself.
+- id: session-query-sqlite
+  name: "@deepseek-ai/dsh-session-query-sqlite"
+  config:
+    path: !!js dshHomePath('session-search.db')
+    openAt: first-search
+
+- insert:
+    - id: one-memory
+      name: "dsh-one-memory"
