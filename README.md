@@ -34,7 +34,7 @@ DeepSeek Harness 插件：一份**全局记忆** + 一组**键值记忆**，会�
 | `memory_delete({ key })` | 删除；`@global` 清空全局记忆 |
 | `memory_recall({ session_id?, turn?, before?, after? })` | 从归档回放一轮；默认当前会话 + 最新一轮 |
 | `session_list({ query?, include_subagents?, offset?, limit? })` | 会话列表；每行给统一 id 和宿主 id |
-| `session_search({ query, session_id?, max_sessions?, limit? })` | 先搜归档，归档为空才回退到 DSH 的 FTS/字面扫描 |
+| `memory_search({ query, session_id?, max_sessions?, limit? })` | 搜归档（含 opencode 轮次），归档为空才回退到 DSH 的 FTS/字面扫描 |
 
 ## 安装
 

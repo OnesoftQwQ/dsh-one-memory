@@ -256,7 +256,7 @@ test('session_search reads the archive first and returns unified ids', async () 
 		user: ['归档里的构建问题'],
 		answer: '用 pnpm build 构建'
 	});
-	const result = await tool('session_search').execute({ query: 'pnpm', limit: 5 }, { agent });
+	const result = await tool('memory_search').execute({ query: 'pnpm', limit: 5 }, { agent });
 	assert.equal(result.mode, 'archive');
 	assert.equal(result.hits.length, 1);
 	assert.equal(result.hits[0].sessionId, registered.id);
@@ -272,7 +272,7 @@ test('session_list and session_search are registered and return structured resul
 	assert.equal(list.sessions.length, 1);
 	assert.equal(list.sessions[0].title, 'Build script');
 
-	const search = await tool('session_search').execute(
+	const search = await tool('memory_search').execute(
 		{ query: 'pnpm', max_sessions: 5, limit: 5 },
 		{ agent }
 	);

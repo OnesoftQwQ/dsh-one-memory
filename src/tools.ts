@@ -339,9 +339,9 @@ export function installTools(
 	});
 
 	register({
-		name: 'session_search',
+		name: 'memory_search',
 		description:
-			'Search user and final-answer text across recent sessions, or one session. Uses the full-text index when available and falls back to a literal scan of recent sessions. Returns session id, title, turn, and excerpts; use memory_recall for the full round. include_subagents defaults to false.',
+			'Search the archived rounds of every hosted agent (this host and opencode) by literal text. Returns session id, title, turn, and excerpts; use memory_recall for the full round. Falls back to this host\'s session-text search when the archive is empty.',
 		parameters: {
 			type: 'object',
 			additionalProperties: false,
